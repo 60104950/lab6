@@ -17,7 +17,7 @@ with app.app_context():
 
 # Web Routes
 @app.route('/')
-def index():
+def index(): 
     return render_template('index.html')
 
 @app.route('/contacts')
@@ -25,7 +25,7 @@ def list_contacts():
     contacts = Contact.query.all()
     return render_template('contacts.html', contacts=contacts)
 
-@app.route('/add', methods=['GET', 'POST'])
+@app.route('/ad', methods=['GET', 'POST'])
 def add_contact():
     form = ContactForm()
     if form.validate_on_submit():
